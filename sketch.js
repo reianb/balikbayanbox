@@ -1,6 +1,7 @@
 let degreeX = 50;
 let degreeY = 30;
 let degreeZ = 1;
+let isRed = false;
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
@@ -9,7 +10,15 @@ function setup() {
 
 function draw() {
   background(125);
-  
+  if(frameCount%80==0){
+    isRed = !isRed;
+  }
+  if(isRed){
+    background("red");
+  }
+  else{
+    background("blue");
+  }
   rotateX(degreeX)
   rotateY(degreeY)
   rotateZ(degreeZ)
