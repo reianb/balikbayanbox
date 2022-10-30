@@ -2,6 +2,12 @@ let degreeX = 50;
 let degreeY = 30;
 let degreeZ = 1;
 let isRed = false;
+let tinikling;
+function preload()
+{
+  soundFormats('mp3', 'ogg');
+  tinikling =loadSound('assets/tinikling.mp3');
+}
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
@@ -26,6 +32,7 @@ function draw() {
   if (mouseIsPressed){
     degreeX = -mouseY;
     degreeY = mouseX;
+    tinikling.play();
   }
     fill(185,156,107);
     box(400);
