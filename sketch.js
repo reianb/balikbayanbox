@@ -10,7 +10,7 @@ function setup() {
 
 function draw() {
   background(125);
-  if(frameCount%80==0){
+  if(frameCount%100==0){
     isRed = !isRed;
   }
   if(isRed){
@@ -19,6 +19,7 @@ function draw() {
   else{
     background("blue");
   }
+  
   rotateX(degreeX)
   rotateY(degreeY)
   rotateZ(degreeZ)
