@@ -2,11 +2,11 @@ let degreeX = 50;
 let degreeY = 30;
 let degreeZ = 1;
 let isRed = false;
-let tinikling;
+let sound;
 function preload()
 {
   soundFormats('mp3', 'ogg');
-  tinikling =loadSound('assets/tinikling.mp3');
+  sound =loadSound('assets/audio0.mp3');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -32,12 +32,10 @@ function draw() {
   if (mouseIsPressed){
     degreeX = -mouseY;
     degreeY = mouseX;
-    tinikling.play();
+    if(sound.isPlaying()==false){
+    sound.play();
+    }
   }
     fill(185,156,107);
     box(400);
-}
-
-function changeBg(mouseX,mouseY){
-  //let r = map(mouseX)
 }
