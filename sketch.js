@@ -3,10 +3,12 @@ let degreeY = 30;
 let degreeZ = 1;
 let isRed = false;
 let sound;
+let img;
 function preload()
 {
   soundFormats('mp3', 'ogg');
   sound =loadSound('assets/audio0.mp3');
+  img = loadImage('assets/cardboard.jpeg');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -36,6 +38,6 @@ function draw() {
     sound.play();
     }
   }
-    fill(185,156,107);
+    texture(img);
     box(400);
 }
