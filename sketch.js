@@ -3,6 +3,7 @@ let degreeY = 500;
 let degreeZ = 1;
 let isRed = false;
 let sound;
+let noiceOn= [];
 let img;
 function preload()
 {
