@@ -1,5 +1,5 @@
-let degreeX = 50;
-let degreeY = 30;
+let degreeX = 500;
+let degreeY = 500;
 let degreeZ = 1;
 let isRed = false;
 let sound;
