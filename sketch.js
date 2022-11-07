@@ -20,6 +20,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
   describe('a cardboard box that is rotatable by interacting with a mouse');
+  noStroke();
 }
 
 function draw() {
