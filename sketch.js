@@ -1,7 +1,6 @@
 let degreeX = 500;
 let degreeY = 500;
 let degreeZ = 1;
-let isRed = false;
 let sound = [];
 let img;
 let bckgrnd = [];
@@ -20,15 +19,15 @@ function preload()
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
-  describe('a box that is rotatable by interacting with a mouse');
+  describe('a cardboard box that is rotatable by interacting with a mouse');
 }
 
 function draw() {
-  if(frameCount%100==0){
-    isRed = !isRed;
-  }
-  if(isRed){
+  if(mouseX<=785){
     texture(bckgrnd[0]);
+    plane(windowWidth, windowHeight);
+  } else if(mouseY<=515&&mouseX>785&&mouseX<900){
+    texture(bckgrnd[2]);
     plane(windowWidth, windowHeight);
   }
   else{
