@@ -26,7 +26,7 @@ function draw() {
   if(mouseX<=785){
     texture(bckgrnd[0]);
     plane(windowWidth, windowHeight);
-  } else if(mouseY<=515&&mouseX>785&&mouseX<900){
+  } else if(mouseY<=515&&mouseX>785&&mouseX<1000){
     texture(bckgrnd[2]);
     plane(windowWidth, windowHeight);
   }
