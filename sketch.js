@@ -2,25 +2,24 @@ let degreeX = 500;
 let degreeY = 500;
 let degreeZ = 1;
 let isRed = false;
-let sound0;
-let sound1;
-let xVal;
+let sound = [];
 let img;
 function preload()
 {
   soundFormats('mp3');
-  sound0 =loadSound('assets/audio0.mp3');
-  sound1 =loadSound('assets/audio1.mp3');
   img = loadImage('assets/cardboard.jpeg');
+  for(let i = 0; i<=5;i++){
+    sound[i] = loadSound("assets/audio"+i+".mp3");
+  }
+  
 }
 function setup() {
-  createCanvas(1500, 1000, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   angleMode(DEGREES);
   describe('a box that is rotatable by interacting with a mouse');
 }
 
 function draw() {
-  background(125);
   if(frameCount%100==0){
     isRed = !isRed;
   }
@@ -38,12 +37,21 @@ function draw() {
     degreeX = -mouseY;
     degreeY = mouseX;
   }
-  if(sound0.isPlaying()==false&&mouseX<500){
-    sound0.play();
+  if(sound[0].isPlaying()==false&&sound[4].isPlaying==false&&mouseX<500&&mouseY<300){
+    sound[0].play();
+    sound[4].play();
     }
-    else if(sound0.isPlaying()&&sound1.isPlaying==false&&mouseX>500){
-      sound1.play();
+    
+  if(sound[1].isPlaying()==false&&mouseX>500&&mouseY<300){
+      sound[1].play();
     }
+  if(sound[2].isPlaying()==false&&mouseX<500&&mouseY>300){
+    sound[2].play();
+  }
+  if(sound[3].isPlaying()==false&&mouseX>500&&mouseY>300){
+    sound[3].play();
+  }
+
     texture(img);
     box(400);
 }
