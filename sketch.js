@@ -4,12 +4,16 @@ let degreeZ = 1;
 let isRed = false;
 let sound = [];
 let img;
+let bckgrnd = [];
 function preload()
 {
   soundFormats('mp3');
   img = loadImage('assets/cardboard.jpeg');
   for(let i = 0; i<=6;i++){
     sound[i] = loadSound("assets/audio"+i+".mp3");
+  }
+  for(let i=0; i<=2; i++){
+    bckgrnd[i] = loadImage("assets/bckgrnd"+i+".jpeg");
   }
   
 }
@@ -24,10 +28,12 @@ function draw() {
     isRed = !isRed;
   }
   if(isRed){
-    background("red");
+    texture(bckgrnd[0]);
+    plane(windowWidth, windowHeight);
   }
   else{
-    background("blue");
+    texture(bckgrnd[1]);
+    plane(windowWidth, windowHeight);
   }
   
   if(sound[0].isPlaying()==false&&sound[6].isPlaying()==false&&mouseX>=435&&mouseX<=785&&mouseY>=195&&mouseY<=515){
