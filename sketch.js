@@ -30,33 +30,34 @@ function draw() {
     background("blue");
   }
   
+  if(sound[0].isPlaying()==false&&sound[6].isPlaying()==false&&mouseX>=435&&mouseX<=785&&mouseY>=195&&mouseY<=515){
+    sound[0].play();
+    sound[6].play();
+    }
+    
+  if(sound[1].isPlaying()==false&&mouseX>=786&&mouseX<=1000&&mouseY>=195&&mouseY<=515){
+      sound[1].play();
+
+    } 
+  if(sound[2].isPlaying()==false&&mouseX>=1000&&mouseY>1000){
+    sound[2].play();
+  }
+  if(sound[3].isPlaying()==false&&sound[6].isPlaying()==false&&mouseX>=435&&mouseX<=785&&mouseY>=516&&mouseY<=820){
+    sound[3].play();
+    sound[6].play();
+  }
+  if(sound[4].isPlaying()==false&&mouseX>=785&&mouseX<=1000&&mouseY>=516&&mouseY<=820){
+    sound[4].play();
+  }
+  if(sound[5].isPlaying()==false&&mouseX<800&&mouseY<1000){
+    sound[5].play();
+  }
   rotateX(degreeX)
   rotateY(degreeY)
   rotateZ(degreeZ)
   if (mouseIsPressed){
     degreeX = -mouseY;
     degreeY = mouseX;
-  }
-  if(sound[0].isPlaying()==false&&sound[6].isPlaying()==false&&mouseX<1000&&mouseY<1000){
-    sound[0].play();
-    sound[6].play();
-    }
-    
-  if(sound[1].isPlaying()==false&&mouseX>1000&&mouseY<1000){
-      sound[1].play();
-
-    } 
-  if(sound[2].isPlaying()==false&&mouseX<1000&&mouseY>1000){
-    sound[2].play();
-  }
-  if(sound[3].isPlaying()==false&&sound[6].isPlaying()==false&&mouseX>1000&&mouseY>1000){
-    sound[3].play();
-  }
-  if(sound[4].isPlaying()==false&&mouseX<1000&&mouseX>1000){
-    sound[4].play();
-  }
-  if(sound[5].isPlaying()==false&&mouseX<800&&mouseY<1000){
-    sound[5].play();
   }
     texture(img);
     box(400);
