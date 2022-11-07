@@ -14,7 +14,7 @@ function preload()
   img = loadImage('assets/cardboard.jpeg');
 }
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(1500, 1000, WEBGL);
   angleMode(DEGREES);
   describe('a box that is rotatable by interacting with a mouse');
 }
