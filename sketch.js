@@ -72,5 +72,5 @@ function draw() {
     degreeY = mouseX;
   }
     texture(img);
-    box(400);
+    box(windowWidth/4);
 }
